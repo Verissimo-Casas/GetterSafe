@@ -1,53 +1,30 @@
 import * as React from "react"
 
-const Passarela = (props) => (
-  <svg
-    id="Camada_1"
+export default function Passarela(props) {
+  return (
+    <svg
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
-    x="0px"
-    y="0px"
     viewBox="0 0 595.28 919.39"
-    style={{
-      enableBackground: "new 0 0 595.28 919.39",
-    }}
+    className="fill-black w-screen h-screen " 
     xmlSpace="preserve"
     {...props}
   >
-    <g className="fill-slate-50 font-sans">
-      <rect x={85.28} y={68.2} width={424.72} height={62} />
-      <rect x={85.28} y={171.2} width={424.72} height={62} />
-      <rect x={85.28} y={274.2} width={424.72} height={62} />
-      <rect x={85.28} y={377.2} width={424.72} height={62} />
-      <rect x={85.28} y={480.2} width={424.72} height={62} />
-      <rect x={85.28} y={583.2} width={424.72} height={62} />
-      <rect x={85.28} y={686.2} width={424.72} height={62} />
-      <rect x={85.28} y={789.2} width={424.72} height={62} />
-      <text
-        transform="matrix(1 0 0 1 220 900 )"
-        className="font-semibold text-2xl"
-      >
-        {"GETTER SAFE"}
-      </text>
-    </g>
-
-    <g className="fill-slate-500">
-    <rect
-      x={166}
-      y={447.2}
-      transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 1017.1975 -97.8025)"
-      width={783}
-      height={25}
+    <path d="
+      M85.28 68.2H510v62H85.28z
+      M85.28 171.2H510v62H85.28z
+      M85.28 274.2H510v62H85.28z
+      M85.28 377.2H510v62H85.28z
+      M85.28 480.2H510v62H85.28z
+      M85.28 583.2H510v62H85.28z
+      M85.28 686.2H510v62H85.28z
+      M85.28 789.2H510v62H85.28z
+      M569.997 68.197v783h-25v-783z
+      M50.273 68.202v783h-25v-783z
+      "
     />
-    <rect
-      x={-353.72}
-      y={447.2}
-      transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 497.4731 421.9219)"
-      width={783}
-      height={25}
-    />
-    </g>
-  </svg>
-)
-
-export default Passarela
+    <text transform="translate(150.457 34.914)" className="fill-green-500 text-4xl">
+      {`ACESSO : ${props.acesso}`}
+    </text>
+    </svg>
+  )
+}

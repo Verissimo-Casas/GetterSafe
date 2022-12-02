@@ -1,12 +1,12 @@
-import Passarela from './components/Passarela'
 import './styles/index.css'
-Passarela
-
+import Passarela from './components/Passarela'
+import Contador from './components/Contador'
 
 export default function App() {
+  let condicional = false
   return (
-    <div className="w-screen h-screen flex flex-col items-center justify-center">
-      <Passarela />
+    <div>
+      {condicional ? <Contador /> : <Passarela />}
     </div>
   )
 }

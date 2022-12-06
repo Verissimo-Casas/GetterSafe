@@ -1,12 +1,11 @@
 import './styles/index.css'
-import Passarela from './components/Passarela'
-import Contador from './components/Contador'
+import getDatas from './functions/getDatas'
 
 export default function App() {
-  let condicional = false
+  const dados = getDatas
   return (
     <div>
-      {condicional ? <Contador /> : <Passarela />}
+      
     </div>
   )
 }

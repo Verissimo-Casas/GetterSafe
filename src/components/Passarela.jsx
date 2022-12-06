@@ -1,11 +1,14 @@
 import * as React from "react"
+import Contador from "./Contador"
 
 export default function Passarela(props) {
   return (
     <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 595.28 919.39"
-    className="fill-black w-screen h-screen " 
+    className="fill-[#339d29] w-1/2 h-screen items-center justify-center
+    scale-x-125"
+
     xmlSpace="preserve"
     {...props}
   >
@@ -22,9 +25,9 @@ export default function Passarela(props) {
       M50.273 68.202v783h-25v-783z
       "
     />
-    <text transform="translate(150.457 34.914)" className="fill-green-500 text-4xl">
+    {/* <text transform="translate(150.457 34.914)" className="fill-green-500 text-4xl">
       {`ACESSO : ${props.acesso}`}
-    </text>
+    </text> */}
     </svg>
   )
 }

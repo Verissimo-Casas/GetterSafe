@@ -1,11 +1,15 @@
+import Welcome from './components/Apresentacao';
+import Contador from './components/Contador'
+import Passarela from './components/Passarela'
+
 import './styles/index.css'
-import getDatas from './functions/getDatas'
 
 export default function App() {
-  const dados = getDatas
   return (
-    <div>
-      
+    <div className="w-screen h-screen flex flex-col items-center justify-center">
+      <Welcome />
+      <Contador />
+      <Passarela />
     </div>
   )
 }

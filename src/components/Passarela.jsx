@@ -1,7 +1,10 @@
 import * as React from "react"
+import { useState } from "react"
 import Contador from "./Contador"
 
 export default function Passarela(props) {
+  const[acesso, setAcesso] = useState(0)
+
   return (
     <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -25,9 +28,9 @@ export default function Passarela(props) {
       M50.273 68.202v783h-25v-783z
       "
     />
-    {/* <text transform="translate(150.457 34.914)" className="fill-green-500 text-4xl">
-      {`ACESSO : ${props.acesso}`}
-    </text> */}
+    <text transform="translate(150.457 34.914)" className="fill-green-500 text-4xl">
+      {`ACESSO : ${acesso}`}
+    </text>
     </svg>
   )
 }

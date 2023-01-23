@@ -28,9 +28,9 @@ export default function Passarela(props) {
       M50.273 68.202v783h-25v-783z
       "
     />
-    <text transform="translate(150.457 34.914)" className="fill-green-500 text-4xl">
+    {/* <text transform="translate(150.457 34.914)" className="fill-green-500 text-4xl">
       {`ACESSO : ${acesso}`}
-    </text>
+    </text> */}
     </svg>
   )
 }

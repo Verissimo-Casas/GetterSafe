@@ -1,16 +1,21 @@
 //cont
 import React from 'react'
 import { useState } from 'react'
+import { useFetch } from '../hooks/useFetch'
 
 function Contador () {
-  const[acesso, setAcesso] = useState(0)
+  let cont = 0
+  // useFetch('/dados').data?.foreach((item) => item.evento === 'in' ? console.log(cont++) : null)
+  useFetch('/dados').data?.forEach((item) => item.evento === 'in' ? () => setContador(contador + 1) : null)
+  const [contador, setContador] = useState(1)
+
+
 
   return (
-    <div className='flex items-center justify-center'> 
-      <div className='flex flex-col items-center'>
-        <h1 className="text-3xl text-green-600 py-2">ENTRADA</h1>
-        <p className="text-5xl text-green-600">{acesso}</p>
-      </div>
+    <div>
+      <h1 className="text-white">Contador</h1>
+      {/* <button className="btn btn-primary" onClick={() => setContador(contador + 1)}>Incrementar</button> */}
+      <h2 className="text-white">{contador}</h2>
     </div>
   )
 }

@@ -1,10 +1,11 @@
+import { useEffect } from 'react'
 import {useFetch} from '../hooks/useFetch'
 
-function dataCleaning() {
-  const {data}= useFetch('/dados')
-  useFetch('/dados').data?.forEach((item) => item.evento === 'in' ? setAcesso(): null)
+export function dataCleaning() {
 
-  // const dataClean = data?.map((item) => { return {evento: item.evento, data: item.data, hora: item.hora}})
+  useEffect(() => {
+    useFetch('/dados').data?.forEach((item) => item.evento === 'in' ? console.log(item) : null)
+  }, [])
 }
 
   // data_hora	"2023-01-10, 21:02:24"

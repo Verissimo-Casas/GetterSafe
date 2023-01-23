@@ -1,20 +1,23 @@
 //cont
 import React from 'react'
+import { useEffect } from 'react'
 import { useState } from 'react'
 import { useFetch } from '../hooks/useFetch'
 
 function Contador () {
-  let cont = 0
-  // useFetch('/dados').data?.foreach((item) => item.evento === 'in' ? console.log(cont++) : null)
-  useFetch('/dados').data?.forEach((item) => item.evento === 'in' ? () => setContador(contador + 1) : null)
-  const [contador, setContador] = useState(1)
+  const dados = useFetch('/dados').data?.map((item) => item.evento)
+  const [contador, setContador] = useState(0)
 
-
+  useEffect(() => {
+    let cont = 0
+    dados?.forEach((item) => item === 'in' ? cont++ : null)
+    setContador(cont)
+    console.log(cont)
+  }, [dados])
 
   return (
     <div>
       <h1 className="text-white">Contador</h1>
-      {/* <button className="btn btn-primary" onClick={() => setContador(contador + 1)}>Incrementar</button> */}
       <h2 className="text-white">{contador}</h2>
     </div>
   )
